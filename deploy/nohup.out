@@ -1,0 +1,173 @@
+docker: Error response from daemon: Conflict. The container name "/rmconsole_gn" is already in use by container "36fceb7683130c84d1c3af937501428ec218dae5b2f4ec52524ba6beabb334f7". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+05:50:25,159 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+05:50:25,159 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+05:50:25,159 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/app.jar!/BOOT-INF/classes!/logback.xml]
+05:50:25,192 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@1b2c6ec2 - URL [jar:file:/app.jar!/BOOT-INF/classes!/logback.xml] is not of type file
+05:50:25,538 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+05:50:25,575 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+05:50:25,590 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+05:50:25,603 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+05:50:25,693 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+05:50:25,695 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+05:50:25,807 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1323165413 - No compression will be used
+05:50:25,808 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1323165413 - Will use the pattern /root/logs/consolelogs/rocketmq-console-%d{yyyy-MM-dd}.%i.log for the active file
+05:50:25,811 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@70177ecd - The date pattern is 'yyyy-MM-dd' from file name pattern '/root/logs/consolelogs/rocketmq-console-%d{yyyy-MM-dd}.%i.log'.
+05:50:25,811 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@70177ecd - Roll-over at midnight.
+05:50:25,825 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@70177ecd - Setting initial period to Thu Jul 04 05:50:25 UTC 2019
+05:50:25,825 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@70177ecd - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+05:50:25,827 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+05:50:25,854 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: /root/logs/consolelogs/rocketmq-console.log
+05:50:25,854 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [/root/logs/consolelogs/rocketmq-console.log]
+05:50:25,856 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+05:50:25,856 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+05:50:25,856 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+05:50:25,856 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+05:50:25,857 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1e80bfe8 - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m      [2m (v1.4.3.RELEASE)[0;39m
+
+[2019-07-04 05:50:28.354]  INFO Starting App v1.0.0 on f86835f10383 with PID 9 (/app.jar started by root in /)
+[2019-07-04 05:50:28.357]  INFO No active profile set, falling back to default profiles: default
+[2019-07-04 05:50:28.449]  INFO Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@46ee7fe8: startup date [Thu Jul 04 05:50:28 UTC 2019]; root of context hierarchy
+[2019-07-04 05:50:29.263]  INFO HV000001: Hibernate Validator 5.2.4.Final
+[2019-07-04 05:50:31.666]  INFO Tomcat initialized with port(s): 8080 (http)
+[2019-07-04 05:50:31.684]  INFO Starting service Tomcat
+[2019-07-04 05:50:31.685]  INFO Starting Servlet Engine: Apache Tomcat/8.5.6
+[2019-07-04 05:50:31.813]  INFO Initializing Spring embedded WebApplicationContext
+[2019-07-04 05:50:31.814]  INFO Root WebApplicationContext: initialization completed in 3365 ms
+[2019-07-04 05:50:32.223]  INFO Mapping servlet: 'dispatcherServlet' to [/]
+[2019-07-04 05:50:32.227]  INFO Mapping filter: 'metricsFilter' to: [/*]
+[2019-07-04 05:50:32.228]  INFO Mapping filter: 'characterEncodingFilter' to: [/*]
+[2019-07-04 05:50:32.228]  INFO Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2019-07-04 05:50:32.228]  INFO Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2019-07-04 05:50:32.228]  INFO Mapping filter: 'requestContextFilter' to: [/*]
+[2019-07-04 05:50:32.228]  INFO Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[2019-07-04 05:50:32.229]  INFO Mapping filter: 'applicationContextIdFilter' to: [/*]
+[2019-07-04 05:50:33.271]  INFO Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@46ee7fe8: startup date [Thu Jul 04 05:50:28 UTC 2019]; root of context hierarchy
+[2019-07-04 05:50:33.279]  INFO Detected ResponseBodyAdvice bean in globalRestfulResponseBodyAdvice
+[2019-07-04 05:50:33.401]  INFO Mapped "{[/cluster/brokerConfig.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ClusterController.brokerConfig(java.lang.String)
+[2019-07-04 05:50:33.401]  INFO Mapped "{[/cluster/list.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ClusterController.list()
+[2019-07-04 05:50:33.405]  INFO Mapped "{[/consumer/group.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.groupQuery(java.lang.String)
+[2019-07-04 05:50:33.405]  INFO Mapped "{[/consumer/consumerRunningInfo.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.getConsumerRunningInfo(java.lang.String,java.lang.String,boolean)
+[2019-07-04 05:50:33.405]  INFO Mapped "{[/consumer/queryTopicByConsumer.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.queryConsumerByTopic(java.lang.String)
+[2019-07-04 05:50:33.406]  INFO Mapped "{[/consumer/consumerConnection.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.consumerConnection(java.lang.String)
+[2019-07-04 05:50:33.406]  INFO Mapped "{[/consumer/fetchBrokerNameList.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.fetchBrokerNameList(java.lang.String)
+[2019-07-04 05:50:33.406]  INFO Mapped "{[/consumer/createOrUpdate.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.consumerCreateOrUpdateRequest(org.apache.rocketmq.console.model.request.ConsumerConfigInfo)
+[2019-07-04 05:50:33.406]  INFO Mapped "{[/consumer/examineSubscriptionGroupConfig.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.examineSubscriptionGroupConfig(java.lang.String)
+[2019-07-04 05:50:33.406]  INFO Mapped "{[/consumer/deleteSubGroup.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.deleteSubGroup(org.apache.rocketmq.console.model.request.DeleteSubGroupRequest)
+[2019-07-04 05:50:33.406]  INFO Mapped "{[/consumer/resetOffset.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.resetOffset(org.apache.rocketmq.console.model.request.ResetOffsetRequest)
+[2019-07-04 05:50:33.407]  INFO Mapped "{[/consumer/groupList.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ConsumerController.list()
+[2019-07-04 05:50:33.408]  INFO Mapped "{[/dashboard/broker.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.DashboardController.broker(java.lang.String)
+[2019-07-04 05:50:33.409]  INFO Mapped "{[/dashboard/topic.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.DashboardController.topic(java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.409]  INFO Mapped "{[/dashboard/topicCurrent],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.DashboardController.topicCurrent()
+[2019-07-04 05:50:33.413]  INFO Mapped "{[/message/consumeMessageDirectly.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MessageController.consumeMessageDirectly(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.413]  INFO Mapped "{[/message/queryMessageByTopicAndKey.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MessageController.queryMessageByTopicAndKey(java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.413]  INFO Mapped "{[/message/queryMessageByTopic.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MessageController.queryMessageByTopic(java.lang.String,long,long)
+[2019-07-04 05:50:33.413]  INFO Mapped "{[/message/viewMessage.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MessageController.viewMessage(java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.414]  INFO Mapped "{[/monitor/deleteConsumerMonitor.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MonitorController.deleteConsumerMonitor(java.lang.String)
+[2019-07-04 05:50:33.415]  INFO Mapped "{[/monitor/consumerMonitorConfig.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MonitorController.consumerMonitorConfig()
+[2019-07-04 05:50:33.415]  INFO Mapped "{[/monitor/consumerMonitorConfigByGroupName.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MonitorController.consumerMonitorConfigByGroupName(java.lang.String)
+[2019-07-04 05:50:33.415]  INFO Mapped "{[/monitor/createOrUpdateConsumerMonitor.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.MonitorController.createOrUpdateConsumerMonitor(java.lang.String,int,int)
+[2019-07-04 05:50:33.415]  INFO Mapped "{[/rocketmq/nsaddr],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.NamesvrController.nsaddr()
+[2019-07-04 05:50:33.416]  INFO Mapped "{[/ops/rocketMqStatus.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.OpsController.clusterStatus()
+[2019-07-04 05:50:33.417]  INFO Mapped "{[/ops/updateNameSvrAddr.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.OpsController.updateNameSvrAddr(java.lang.String)
+[2019-07-04 05:50:33.417]  INFO Mapped "{[/ops/updateIsVIPChannel.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.OpsController.updateIsVIPChannel(java.lang.String)
+[2019-07-04 05:50:33.417]  INFO Mapped "{[/ops/homePage.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.OpsController.homePage()
+[2019-07-04 05:50:33.417]  INFO Mapped "{[/producer/producerConnection.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.ProducerController.producerConnection(java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.418]  INFO Mapped "{[/test/runTask.do],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TestController.list() throws org.apache.rocketmq.client.exception.MQClientException,org.apache.rocketmq.remoting.exception.RemotingException,java.lang.InterruptedException
+[2019-07-04 05:50:33.420]  INFO Mapped "{[/topic/queryConsumerByTopic.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.queryConsumerByTopic(java.lang.String)
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/deleteTopicByBroker.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.deleteTopicByBroker(java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/queryTopicConsumerInfo.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.queryTopicConsumerInfo(java.lang.String)
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/examineTopicConfig.query]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.examineTopicConfig(java.lang.String,java.lang.String) throws org.apache.rocketmq.remoting.exception.RemotingException,org.apache.rocketmq.client.exception.MQClientException,java.lang.InterruptedException
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/sendTopicMessage.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.sendTopicMessage(org.apache.rocketmq.console.model.request.SendTopicMessageRequest) throws org.apache.rocketmq.remoting.exception.RemotingException,org.apache.rocketmq.client.exception.MQClientException,java.lang.InterruptedException
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/route.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.route(java.lang.String)
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/createOrUpdate.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.topicCreateOrUpdateRequest(org.apache.rocketmq.console.model.request.TopicConfigInfo)
+[2019-07-04 05:50:33.421]  INFO Mapped "{[/topic/stats.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.stats(java.lang.String)
+[2019-07-04 05:50:33.422]  INFO Mapped "{[/topic/deleteTopic.do],methods=[POST]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.delete(java.lang.String,java.lang.String)
+[2019-07-04 05:50:33.422]  INFO Mapped "{[/topic/list.query],methods=[GET]}" onto public java.lang.Object org.apache.rocketmq.console.controller.TopicController.list() throws org.apache.rocketmq.client.exception.MQClientException,org.apache.rocketmq.remoting.exception.RemotingException,java.lang.InterruptedException
+[2019-07-04 05:50:33.424]  INFO Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2019-07-04 05:50:33.424]  INFO Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2019-07-04 05:50:33.535]  INFO Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2019-07-04 05:50:33.536]  INFO Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2019-07-04 05:50:33.558]  INFO Detected @ExceptionHandler methods in globalExceptionHandler
+[2019-07-04 05:50:33.559]  INFO Detected ResponseBodyAdvice implementation in globalRestfulResponseBodyAdvice
+[2019-07-04 05:50:33.599]  INFO Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2019-07-04 05:50:33.644]  INFO Adding welcome page: class path resource [static/index.html]
+[2019-07-04 05:50:34.182]  INFO Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.183]  INFO Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.184]  INFO Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+[2019-07-04 05:50:34.185]  INFO Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.186]  INFO Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.187]  INFO Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[2019-07-04 05:50:34.187]  INFO Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.188]  INFO Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.188]  INFO Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.192]  INFO Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[2019-07-04 05:50:34.192]  INFO Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.193]  INFO Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[2019-07-04 05:50:34.193]  INFO Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2019-07-04 05:50:34.361]  INFO Registering beans for JMX exposure on startup
+[2019-07-04 05:50:34.366]  INFO Registering beans for JMX exposure on startup
+[2019-07-04 05:50:34.370]  INFO Starting beans in phase 0
+[2019-07-04 05:50:34.376]  INFO Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[2019-07-04 05:50:34.400]  INFO Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[2019-07-04 05:50:34.407]  INFO Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[2019-07-04 05:50:34.411]  INFO Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[2019-07-04 05:50:34.415]  INFO Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[2019-07-04 05:50:34.571]  INFO Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[2019-07-04 05:50:34.575]  INFO Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[2019-07-04 05:50:34.578]  INFO Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[2019-07-04 05:50:34.584]  INFO Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[2019-07-04 05:50:34.587]  INFO Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[2019-07-04 05:50:34.599]  INFO No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+[2019-07-04 05:50:34.612]  INFO Initializing ProtocolHandler ["http-nio-8080"]
+[2019-07-04 05:50:34.622]  INFO Starting ProtocolHandler [http-nio-8080]
+[2019-07-04 05:50:34.683]  INFO Using a shared selector for servlet write/read
+[2019-07-04 05:50:34.697]  INFO Tomcat started on port(s): 8080 (http)
+[2019-07-04 05:50:34.702]  INFO Started App in 8.358 seconds (JVM running for 12.288)
+[2019-07-04 05:50:44.996]  INFO Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2019-07-04 05:50:44.996]  INFO FrameworkServlet 'dispatcherServlet': initialization started
+[2019-07-04 05:50:45.025]  INFO FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+[2019-07-04 05:50:47.069]  INFO op=look_clusterInfo {"brokerAddrTable":{"8319a73b925c":{"cluster":"DefaultCluster","brokerName":"8319a73b925c","brokerAddrs":{"0":"172.16.0.106:10922"}}},"clusterAddrTable":{"DefaultCluster":["8319a73b925c"]}}
+[2019-07-04 05:50:53.289]  INFO op=look_clusterInfo {"brokerAddrTable":{"8319a73b925c":{"cluster":"DefaultCluster","brokerName":"8319a73b925c","brokerAddrs":{"0":"172.16.0.106:10922"}}},"clusterAddrTable":{"DefaultCluster":["8319a73b925c"]}}
+[2019-07-04 05:53:46.772]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:53:46.777]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:53:46.782]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:53:46.785]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 05:53:47.778]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:53:47.782]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:53:47.784]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:53:47.788]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 05:55:11.298]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:55:11.302]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:55:11.304]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:55:11.307]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 05:55:11.859]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:55:11.862]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:55:11.865]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:55:11.875]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 05:55:12.058]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:55:12.062]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:55:12.065]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:55:12.069]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 05:55:12.250]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:55:12.252]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:55:12.255]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:55:12.258]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 05:55:13.531]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 05:55:13.535]  INFO begin=1562215980000 end=1562223180000 time not in range 1561536975549 Wed Jun 26 08:16:15 UTC 2019
+[2019-07-04 05:55:13.538]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 05:55:13.541]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 06:32:33.683]  INFO MessageClientIDSetter.getNearlyTimeFromID(msgId)=Tue Jun 04 14:31:12 UTC 2019 msgId=0A00128D519418B4AAC21290B198000B
+[2019-07-04 06:33:46.762]  INFO begin=1562215980000 end=1562223180000 time not in range 1561630452922 Thu Jun 27 10:14:12 UTC 2019
+[2019-07-04 06:33:46.767]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212550972 Thu Jul 04 03:55:50 UTC 2019
+[2019-07-04 06:33:46.769]  INFO begin=1562215980000 end=1562223180000 time not in range 1562212552911 Thu Jul 04 03:55:52 UTC 2019
+[2019-07-04 06:33:52.733]  INFO MessageClientIDSetter.getNearlyTimeFromID(msgId)=Tue Jun 04 14:31:12 UTC 2019 msgId=0A00128D519418B4AAC21290B198000B

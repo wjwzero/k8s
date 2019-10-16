@@ -1,0 +1,12 @@
+cluster.name: es
+node.name: master
+node.master: true
+node.data: true
+node.max_local_storage_nodes: 2
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+network.host: 0.0.0.0
+discovery.zen.minimum_master_nodes: 1
+indices.query.bool.max_clause_count: 10240
+#discovery.zen.ping.unicast.hosts: elasticsearch
+#path.repo: ["/usr/share/elasticsearch/backups/backups","/usr/share/elasticsearch/data/backups","/usr/share/elasticsearch/data"]

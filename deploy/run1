@@ -1,0 +1,41 @@
+#本机外网IP
+network_ip=172.16.0.106;
+catalog="/opt/jimi-soft/itms/gn_dev";
+listenPort=10922;
+
+#构建namesrv镜像
+cd "$catalog/rocket-mq/namesrv";
+#./build;
+
+#构建broker镜像
+cd "$catalog/rocket-mq/broker";
+#./build;
+
+cd "$catalog/rocket-mq/broker/conf";
+#修改broker配置
+/bin/cp broker.properties.conf broker.properties;
+sed -i "s?<network_ip>?$network_ip?gi;s?<listenPort>?$listenPort?gi;" "broker.properties";
+
+#启动4个基础服务：mysql、redis、es、rocket
+cd "$catalog";
+/bin/cp base-service_1.yml.conf docker-compose.yml;
+docker-compose up -d;
+#rm -f docker-compose.yml;
+
+#等待10S确保基础服务都完全启动
+#sleep 10s;
+
+#启动eureka
+#/bin/cp business-service-head.yml.conf docker-compose.yml;
+#cat business-service-body.yml.conf >> docker-compose.yml;
+#cat business-service-end.yml.conf >> docker-compose.yml;
+
+#等待eureka服务的健康检查状态为健康
+
+#rm -f docker-compose.yml;
+
+#启动其他业务服务
+
+
+echo "success!";
+exit 0;

@@ -1,0 +1,80 @@
+version: '2'
+services:
+  elasticsearch:
+    image: elasticsearch:5.6.5
+    container_name: elasticsearch-dev-chn.itms.cn
+    hostname: elasticsearch-dev-chn
+    domainname: itms.cn
+    environment:
+      - ES_CLUSTERNAME=es
+      - index.query.bool.max_clause_count=10240
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+#    mem_limit: 1g
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - ./es/es.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./es/data1:/usr/share/elasticsearch/data
+    ports:
+      - 9202:9200
+      - 9302:9300
+#######################################################
+  mysql:
+    image: mysql:5.7
+    ports:
+     - 3307:3306
+    container_name: mysql-default-dev-chn.itms.cn
+    hostname: mysql-default-dev-chn
+    domainname: itms.cn
+    environment:
+      MYSQL_ROOT_PASSWORD: jimi@itms
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - /etc/localtime:/etc/localtime
+#######################################################
+  redis:
+    image: redis:3.2
+    ports:
+      - 6380:6379
+    dns_search: itms.cn
+    container_name: redis-default-dev-chn.itms.cn
+    hostname: redis-default-dev
+    domainname: itms.cn
+    volumes:
+      - ./redis/data:/data
+    command: 
+      redis-server --requirepass jimi@redis --appendonly yes --loglevel debug --logfile "/data/redis.log"
+#######################################################
+  rmq-nameserver:
+    image: apache/incubator-rocketmq-namesrv:4.3.0
+    ports: 
+      - 9877:9876
+    container_name: rmqnamesrv-dev-chn.itms.cn
+    hostname: rmqnamesrv-dev-chn
+    domainname: itms.cn
+    volumes:
+      - ./rocket-mq/namesrv/store:/opt/store
+      - ./rocket-mq/namesrv/logs:/opt/logs
+#######################################################
+  rmq-broker:
+    image: apache/incubator-rocketmq-broker:4.3.0
+    ports:
+      - 10922:10922 
+      - 10920:10920
+    container_name: rmqbroker-dev-chn
+    environment:
+      NAMESERVER: rmqnamesrv-dev-chn.itms.cn:9876
+    volumes:
+      - ./rocket-mq/broker/store:/opt/store
+      - ./rocket-mq/broker/logs:/opt/logs
+      - ./rocket-mq/broker/conf:/opt/conf
+networks:
+  default:
+    external:
+      name: itms_gn
